@@ -8,9 +8,9 @@ app = Flask(__name__)
 # Set up Google Sheets credentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 try:
-    creds = ServiceAccountCredentials.from_json_keyfile_name(r"C:\Users\Akshay\OneDrive\Desktop\EEX\april 25 pico\credentials_key.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name(r"credentials_key.json", scope)
     client = gspread.authorize(creds)
-    sheet_url = 'https://docs.google.com/spreadsheets/d/13Z7qMtifDp27RAb1RSCFWLNBIB86y4IL3yFXuBayT-4/edit#gid=0'
+    sheet_url = #your spreadsheet link
     sheet = client.open_by_url(sheet_url).sheet1
 except Exception as e:
     print("Error initializing Google Sheets client:", e)
