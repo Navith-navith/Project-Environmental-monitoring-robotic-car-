@@ -82,7 +82,7 @@ def data_process():
                 oled_data(Data)
                 
                 
-                server_url = 'http://192.168.31.132:5000/upload'
+                server_url = 'flask url/upload'#put your flask url here
                 response = requests.post(server_url, json=Data,timeout=10)#, headers={'Content-Type': 'application/json'})
                 response.close()
                 break
